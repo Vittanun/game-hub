@@ -9,8 +9,8 @@ interface Props {
   selectedGenre: Genre | null;
 }
 
-const GameGrid = ({ selectdGenre }: Props) => {
-  const { data, error, isLoading } = useGames(selectdGenre);
+const GameGrid = ({ selectedGenre }: Props) => {
+  const { data, error, isLoading } = useGames(selectedGenre);
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
